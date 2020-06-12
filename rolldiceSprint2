@@ -1,0 +1,27 @@
+import random #to allow the dice to ouput random number between 1 and 6 
+
+print("WELCOME TO THE BETTING DICE SHOP") #Welcomes the user to the game
+roll_dice = True
+while True:
+    choice = input("Would you like to roll the dice? Y/N ".upper())
+    if choice == 'Y':
+        bet = input("How much does the winner get?")  #To let the user type out what's at stake or how much the winner gets
+        user = random.randint(1,6)
+        print("You rolled a", user,"!")
+        comp = random.randint(1,6)
+        print("You rolled a", comp ,"!")
+        if user> comp:
+           print("You win! You won yourself ", str(bet))
+        elif comp> user:
+             print("You lose! Sorry nothing for you!")
+        else:
+            print("It's a draw!")
+            print("Play again") #gives the user another chance
+           
+           
+
+    elif choice == "N":
+        print("Thanks for playing!")
+        break
+    else:
+            print("Please input 'Y' or 'N'")         
