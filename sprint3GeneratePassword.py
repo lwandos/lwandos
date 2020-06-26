@@ -1,11 +1,11 @@
 import random
 
-def generatepassword(num):
-    password = ''
-    
-    for i in range(num):
-        i = random.radint(0.94)
-        password = string.printable[i]
-    return password
-    print(generatepassword)
-    
+def password(length):
+    pw= str()
+    characters = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    for i in range(length):
+        pw = pw + random.choice(characters)
+    print(pw)
+    return pw
+
+password(4)   
